@@ -15,27 +15,27 @@ $name = $_POST['name']; $email = $_POST['email']; $comments = $_POST['comments']
 
 if(trim($name) == '') {
 
-	exit('<div class="error_message">You must enter your name.</div>');
+	exit('<div class="error_message">Vous devez entrer votre nom</div>');
 
 } else if(trim($name) == 'Your Name') {
 
-	exit('<div class="error_message">You must enter your name.</div>');
+	exit('<div class="error_message">Vous devez entrer votre nom</div>');
 
 } else if(trim($email) == 'Email') {
 
-	exit('<div class="error_message">Please enter a valid email address.</div>');
+	exit('<div class="error_message">Veuillez entrer une adresse mail valide.</div>');
 
 } else if(!tommus_email_validate($email)) {
 
-	exit('<div class="error_message">You have entered an invalid e-mail address.</div>');
+	exit('<div class="error_message">Vous avez entré une adresse mail invalide</div>');
 
 } else if(trim($comments) == 'Tell us what you think!') {
 
-	exit('<div class="error_message">Please enter your message.</div>');
+	exit('<div class="error_message">Entrez votre message</div>');
 
 } else if(trim($comments) == '') {
 
-	exit('<div class="error_message">Please enter your message.</div>');
+	exit('<div class="error_message">Entrez votre message</div>');
 	
 } else if( strpos($comments, 'href') !== false ) {
 
@@ -49,7 +49,7 @@ if(trim($name) == '') {
 
 
 
-$address = 'hello@email.com';
+$address = 'Dylane.heinis@gmail.com';
 
 
 
@@ -79,4 +79,4 @@ $headers .= "Content-Transfer-Encoding: quoted-printable" . "\r\n";
 
 
 
-if(mail($address, $e_subject, $msg, $headers)) { echo "<fieldset><div id='success_page'><h4>Email Sent!</h4></div></fieldset>"; }
+if(mail($address, $e_subject, $msg, $headers)) { echo "<fieldset><div id='success_page'><h4>Message envoyé!</h4></div></fieldset>"; }
